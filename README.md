@@ -6,11 +6,12 @@ each table will represent a text channel. All logs are dated, and usernames are 
 
 Future updates: return x amount of messages from user.
 
-#Installing
+# Installing
 
-1. Open config.json and update with your token code
-2. run on node: 
->npm install --save discord.js
->npm install --save sqlite
+1. Open config.json and update with your token code  
+2. run on node:   
+>npm install --save discord.js  
+>npm install --save sqlite  
 >npm install --save moment
+
 3.Open node command prompt and type "node index.js" to start and it will start logging!
