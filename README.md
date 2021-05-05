@@ -21,10 +21,9 @@ This discord bot made in Discord JS will copy any messages and log them into sql
 
 # Installing
 
-1. Open config.json and update with your token code
+1. Open `.env` and update with your token code
+
 2. run on node:
-    > npm install --save discord.js  
-    > npm install --save sqlite  
-    > npm install --save moment
+    > yarn install
 
 3.Open node command prompt and type "node index.js" to start and it will start logging!

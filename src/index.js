@@ -1,6 +1,5 @@
 import { Client } from "discord.js";
 const client = new Client();
-import { token } from "./config.json";
 import { open, run } from "sqlite";
 require("dotenv").config();
 
