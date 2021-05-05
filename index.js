@@ -31,12 +31,13 @@ client.on("message", (message) => {
 
 	// Insert the message into our database
 	run(
-		"INSERT INTO messages (channel_id, message, user_id, is_dm) VALUES (?, ?, ?, ?)",
+		"INSERT INTO messages (channel_id, message, user_id, is_dm. timestamp) VALUES (?, ?, ?, ?, ?)",
 		[
 			message.channel.id,
 			message.content,
 			message.author.id,
 			message.channel.type == "dm" ? 1 : 0, // We don't want to insert a boolean into the INTEGER row, so let's convert it.
+			Date.now(),
 		]
 	).catch((ex) => {
 		// If there is some how an error with inserting, let the user know!
