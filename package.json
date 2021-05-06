@@ -1,6 +1,6 @@
 {
   "name": "little_logger",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Logs all activity in the discord channel in sqlite",
   "main": "index.js",
   "dependencies": {
