@@ -28,6 +28,13 @@ require("dotenv").config();
 			});
 
 			client.on("message", (message) => {
+				if (message.attachments.size > 0) {
+					console.log(
+						`Attachment from ${message.author.username} (${message.author.id}) received, ignoring...`
+					);
+					return;
+				}
+
 				// Let's go ahead and log that we received a message from someone
 				if (message.channel.type == "dm") {
 					console.log(
@@ -46,7 +53,7 @@ require("dotenv").config();
 						message.channel.id,
 						message.content,
 						message.author.id,
-						message.channel.type == "dm" ? 1 : 0, // We don't want to insert a boolean into the INTEGER row, so let's convert it.
+						message.channel.type == "dm" ? 1 : 0, // We don't want to insert a boolean into the INTEGER type, so let's convert it.
 						Date.now(),
 					]
 				).catch((ex) => {
